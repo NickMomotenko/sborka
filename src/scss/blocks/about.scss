@@ -1,0 +1,25 @@
+.about{
+	margin-top: 100px;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		padding: 15px 0;
+		border-top: 5px solid #373645;
+		border-bottom: 5px solid #6e9bca;
+
+		.content{
+
+			&__title{
+				margin-right: 20px;
+			}
+		}
+
+		@include tablets{
+			flex-direction: column;
+			text-align: center;
+			padding: 15px 5%;
+		}
+	}
+
+}

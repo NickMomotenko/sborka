@@ -1,0 +1,91 @@
+.clients{
+	margin-top: 50px;
+
+	&__content{
+		text-align: center;
+	}
+
+	&__list{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 50px;
+
+		@include tablets{
+			flex-wrap: wrap;
+		}
+
+		@include smallphones{
+			flex-direction: column;
+		}
+	}
+
+	&__item{
+		margin-right: 30px;
+
+		&:last-child{
+			margin-right:0;
+		}
+
+		@include tablets{
+			width: 45%;
+			display: flex;
+			justify-content: center;
+
+			&:nth-child(even){
+				margin-right: 0;
+			}
+		}
+
+		@include smallphones{
+			flex:1;
+			margin-right: 0;
+			margin-bottom: 10px;
+
+			&:last-child{
+				margin-bottom:0;
+			}
+		}
+	}
+
+	&__link{
+		display: block;
+
+		&--tvdigital, &--changes,  &--finance, &--lezo{
+			&:before{ 
+				content:'';
+				display: block;
+				height: 50px;
+				width: 130px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				-webkit-background-size: contain;
+				background-size: contain;
+			}
+		}
+
+		&--tvdigital{
+			&:before{
+				background-image:url(../img/clients/1.png);
+			}
+		}
+
+		&--changes{
+			&:before{
+				background-image:url(../img/clients/2.png);
+			}
+		}
+
+		&--finance{
+			&:before{
+				background-image:url(../img/clients/3.png);
+			}
+		}
+
+		&--lezo{
+			&:before{
+				background-image:url(../img/clients/4.png);
+			}
+		}
+	}
+}

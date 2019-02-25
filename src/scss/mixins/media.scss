@@ -1,0 +1,29 @@
+@mixin smallphones{
+	@media screen and (max-width: $screen-s){
+		@content;
+	}
+}
+
+@mixin phones{
+	@media screen and (max-width: $screen-xs){
+		@content;
+	}
+}
+
+@mixin tablets{
+	@media screen and (max-width: $screen-sm){
+		@content;
+	}
+}
+
+@mixin smallmonitor{
+	@media screen and (max-width: $screen-md){
+		@content;
+	}
+}
+
+@mixin monitor{
+	@media screen and (max-width: $screen-lg){
+		@content;
+	}
+}

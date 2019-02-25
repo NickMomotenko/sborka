@@ -1,0 +1,173 @@
+.news{
+	
+	margin-top: 50px;
+
+	&__content{
+		text-align: center;
+	}
+
+	&__list{
+		display: flex;
+		margin-top: 50px;
+		padding: 10px;
+
+		background: url(../img/lines-bg.png) center center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+
+		@include tablets{
+			flex-direction: column;
+			padding: 15px 10px;
+		}
+	}
+
+	&__item{
+		display: flex;
+		margin-right: 30px;
+		flex: 1;
+		background-color: #fff;
+
+		&:last-child{
+			margin-right:0;
+		}
+
+		@include tablets{
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 10px;
+
+			&:last-child{
+				margin-bottom:0;
+			}
+		}
+	}
+
+	&__col{
+		width: 15%;
+		margin-right: 20px;
+		text-align: center;
+
+		&--user{
+			flex:1;
+			text-align: left;
+		}
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+	&__date{
+		font-weight: 300;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		border-right: 1px solid #ccc;
+
+		&-month{
+			font-size: 25px;
+			color: #373645;
+
+			@include phones{
+				font-size: 19px;
+			}
+		}
+
+		&-number{
+			font-weight: 800;
+			font-size: 50px;
+			color: #6e9bca;
+
+			@include smallmonitor{
+				font-size: 40px;
+			}
+
+			@include phones{
+				font-size: 30px;
+			}
+		}
+
+		&-year{
+			font-size: 15px;
+			color: #cccccc;
+		}
+	}
+
+	&__communications{
+		border-right: 1px solid #ccc;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&-likes, &-share, &-comments{
+			position: relative;
+			display: inline-block;
+
+			&:before{
+				content:'';
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+
+			&:after{
+				content: '';
+				border-radius: 50%;
+				background-color: #373645;
+				width: 15px;
+				height: 15px;
+				display: inline-block;
+				position: absolute;
+				right: -5px;
+				top: 0;
+
+				font-weight: 300;
+				color: #fff;
+				font-size: 8px;
+				line-height: 15px;
+				vertical-align: middle;
+			}
+		}
+
+		&-likes{
+			&:before{
+				background-image:url(../img/reviews/like.png);
+			}
+
+			&:after{
+				content: '12';
+			}
+		}
+
+		&-share{
+			&:before{
+				background-image:url(../img/reviews/share.png);
+			}
+
+			&:after{
+				content: '5';
+			}
+		}
+
+		&-comments{
+			&:before{
+				background-image:url(../img/reviews/comment.png);
+			}
+
+			&:after{
+				content: '3';
+			}
+		}
+	}
+
+	&__user{
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__block{
+		text-transform: uppercase;
+	}
+}

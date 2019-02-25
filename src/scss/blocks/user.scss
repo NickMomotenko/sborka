@@ -1,0 +1,27 @@
+.user{
+	
+	font-size: 12px;
+	font-weight: 300;
+	text-transform: uppercase;
+
+	&__avatar{
+		width: 78px;
+		height: 78px;
+		margin-right: 10px;
+
+		&-img{
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	&__name{
+		color: #373645;
+		margin-right: 15px;
+		
+	}
+
+	&__position{
+		color: #6f9ccb;
+	}
+}

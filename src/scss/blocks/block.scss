@@ -1,0 +1,31 @@
+.block{
+
+	&__icon{
+		margin-bottom: 35px;
+		max-width: 290px;
+		max-height: 290px;
+
+		&-img{
+			max-height: 100%;
+			max-width: 100%;
+		}
+	}
+
+	&__title{
+		color: #373645;
+		font-size: 20px;
+		margin-bottom: 15px;
+		
+	}
+
+	&__subtitle{
+		font-size: 12px;
+		color: #cccccc;
+		margin-bottom: 25px;
+	}
+
+	&__button{
+		text-align: right;
+		/*margin-top: auto;*/
+	}
+}

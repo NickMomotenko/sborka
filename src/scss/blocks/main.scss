@@ -1,0 +1,10 @@
+.main{
+	background: url(../img/main-bg.png) 53% 50% no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding-top: 20px;
+
+	&__slider{
+		margin:100px 0;
+	}
+}

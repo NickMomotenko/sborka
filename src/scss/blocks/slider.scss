@@ -1,0 +1,97 @@
+.slider{
+	position: relative;
+
+	&__wrapp{
+		overflow: hidden;
+	}
+
+	&__list{
+		display: flex;
+		transition: .5s;
+	}
+
+	&__item{
+		flex:1;
+
+		@include phones{
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__descr{
+		display: inline-block;
+		text-align: center;
+		font-weight: 300;	
+		text-transform: uppercase;
+		padding:0 100px;
+
+		@include tablets{
+			padding: 0;
+		}
+	}
+
+	&__title{
+		margin-bottom: 7px;
+		font-size: 68px;
+		color: #ffffff;
+
+		@include phones{
+			font-size: 45px;
+		}
+	}
+
+	&__subtitle{
+		margin-bottom: 10px;
+		font-size: 41px;
+		font-weight: 400;
+		color: #373645;
+
+		@include phones{
+			font-size: 27px;
+		}
+	}
+
+	&__info{
+		margin-bottom: 25px;
+		color: #6f9ccb;
+
+		@include phones{
+			padding: 0 10%;
+		}
+	}
+
+	&__page{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		transform: translateY(-50%);
+
+		display: flex;
+		justify-content: space-between;
+
+		&-link{
+			display: inline-block;
+			height: 22px;
+			width: 15px;
+			background-repeat: no-repeat;
+			background-position: center center;
+			border:1px solid #fff;
+			padding: 25px;
+
+			&:hover{
+				background-color: #e9e9d9;
+			}
+
+			&--prev, &--next{
+				content: '';
+				background-image: url(../img/arrow-link.png);
+			}
+
+			&--next{
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
